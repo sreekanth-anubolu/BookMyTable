@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="BookMyTable.Pages.ReasturantDetails" BackgroundColor="White">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+    <Grid Padding="5">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="40"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+      <Image Grid.Row="0"  HeightRequest="150" VerticalOptions="Start" HorizontalOptions="Fill" Source="table.jpg"/>
+      <StackLayout Grid.Row="1" Orientation="Vertical">
+        <Grid>
+          <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+          </Grid.RowDefinitions>
+          <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+          </Grid.ColumnDefinitions>
+
+          <Label Grid.Column="0" Grid.Row="0" Text="{Binding Name}" Font="Bold,Large" HorizontalOptions="Start" TextColor="Black" />
+          <StackLayout Grid.Row="0" Grid.Column="1" Orientation="Horizontal">
+            <Image   HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="StarGold.png"/>
+            <Image   HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="StarGold.jpg"/>
+            <Image   HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="StarGold.jpg"/>
+            <Image   HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="StarGold.jpg"/>
+            <Image   HeightRequest="25" WidthRequest="25" VerticalOptions="Center" HorizontalOptions="Center" Source="StarGold.jpg"/>
+          </StackLayout>
+          <Label Grid.Row="1" Grid.Column="0"  Text="{Binding Location}" Font="Bold,Large" HorizontalOptions="Start" TextColor="Black" />
+
+        </Grid>
+        <StackLayout Orientation="Horizontal"  HorizontalOptions="StartAndExpand"
+                 Padding="0,0,0,0">
+          <Label Text="Contact: " Font="Bold,Medium"/>
+          <Label Text="{Binding Contact}" Font="Bold,Large"/>
+        </StackLayout>
+        <Label Text="Available" Font="Bold,Medium" TextColor="Green"/>
+      </StackLayout>
+
+      <Button x:Name="btnBookTable" Text="Book Table" Grid.Row="4" Clicked="BookTableClicked"  Grid.ColumnSpan="4" BackgroundColor="#f9790e" TextColor="Black" VerticalOptions="Fill" HorizontalOptions="Fill" />
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

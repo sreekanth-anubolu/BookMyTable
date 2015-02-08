@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="BookMyTable.Pages.SearchRestaurant" BackgroundImage="table4.jpg">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+  <ContentPage.Content>
+
+    <Grid HorizontalOptions="Center" VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="200"/>
+        <RowDefinition Height="60"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="*"/>
+      </Grid.RowDefinitions>
+      
+      <Entry TextColor="Black" Grid.Row="1" BackgroundColor="#f5f5f5" WidthRequest="250" HorizontalOptions="Center" VerticalOptions="Center"/>
+      <Button x:Name="btnGo" Text="Search" HeightRequest="50" WidthRequest="150" Clicked="SearchRestaurantClicked" BackgroundColor="#f9790e"  Grid.Row="2" HorizontalOptions="Center" VerticalOptions="Center"/>
+
+    </Grid>
+
+
+  </ContentPage.Content>
+</ContentPage>

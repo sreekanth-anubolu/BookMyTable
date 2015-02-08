@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="BookMyTable.Pages.UserFeedback" BackgroundColor="White">
+  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <Grid>
+      <Grid.RowDefinitions>
+        <RowDefinition Height="10" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="5" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="Auto" />
+        <RowDefinition Height="40" />
+        <RowDefinition Height="Auto" />
+      </Grid.RowDefinitions>
+
+      <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="5" />
+        <ColumnDefinition Width="*" />
+        <ColumnDefinition Width="5" />
+      </Grid.ColumnDefinitions>
+
+      <Label Text="Rate This App :" Grid.Row="1" Grid.Column="1" TextColor="Black"  Font="Large"/>
+      <StackLayout Grid.Row="3" Grid.Column="1" Orientation="Horizontal">
+        <Image   Source="StarGray.png" WidthRequest="50" HeightRequest="50">
+
+        </Image>
+        <Image   Source="StarGray.png" WidthRequest="50" HeightRequest="50">
+
+        </Image>
+        <Image   Source="StarGray.png" WidthRequest="50" HeightRequest="50">
+
+        </Image>
+        <Image   Source="StarGray.png" WidthRequest="50" HeightRequest="50">
+
+        </Image>
+        <Image   Source="StarGray.png" WidthRequest="50" HeightRequest="50">
+
+        </Image>
+
+      </StackLayout>
+
+
+      <Button  Grid.Row="5" Grid.Column="1" TextColor="White"
+              VerticalOptions="Fill" HorizontalOptions="Fill"
+              BorderWidth="0" BackgroundColor="#1ab864"
+              Text="Submit" Clicked="SubmitClicked" />
+      <Label x:Name="txtThanks" Text="Thank you for rating us" Grid.Row="6" Grid.Column="1"  Font="Bold,Large" TextColor="Red"/>
+
+
+      <Button  Grid.Row="8" Grid.Column="1" TextColor="White"
+             VerticalOptions="Fill" HorizontalOptions="Fill"
+             BorderWidth="0" BackgroundColor="#1ab864"
+             Text="Continue Search" Clicked="ContinueClicked" />
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>

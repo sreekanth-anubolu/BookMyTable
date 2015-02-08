@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="BookMyTable.Pages.RegisterReasturant" BackgroundColor="White">
+	  <ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <ScrollView>
+      <Grid Padding="5">
+        <Grid.RowDefinitions>
+          <RowDefinition Height="40"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="Auto"/>
+          <RowDefinition Height="10"/>
+          <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+          <ColumnDefinition Width="10"/>
+          <ColumnDefinition Width="Auto"/>
+          <ColumnDefinition Width="*"/>
+          <ColumnDefinition Width="10"/>
+        </Grid.ColumnDefinitions>
+
+        <BoxView Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4"  Color="#f9790e" />
+
+        <StackLayout Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" HorizontalOptions="Center">
+          <StackLayout.Children>
+            <Label Text="Book Your Table" Font="Bold,Large" TextColor="Black" HorizontalOptions="StartAndExpand" VerticalOptions="Center"/>
+            <Image x:Name="homeimage"  HorizontalOptions="Center"
+                      Source="table.jpg" WidthRequest="150" HeightRequest="150" Aspect="AspectFill"/>
+
+          </StackLayout.Children>
+        </StackLayout>
+
+        <Label Text="Reasturant Name" HeightRequest ="40" Font="Bold,Medium" TextColor="Black" Grid.Row="2" Grid.Column="1" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Entry  Grid.Row="2" Grid.Column="2" BackgroundColor="#f5f5f5"  VerticalOptions="Fill" HorizontalOptions="Fill"/>
+
+        <Label Text="Location" HeightRequest ="40" Grid.Row="3" Font="Bold,Medium" TextColor="Black" Grid.Column="1" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Entry  Grid.Row="3" Grid.Column="2" BackgroundColor="#f5f5f5"  VerticalOptions="Fill" HorizontalOptions="Fill"/>
+
+        <Label Text="OwnerName" HeightRequest ="40" Grid.Row="4" Font="Bold,Medium" TextColor="Black" Grid.Column="1" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Entry  Grid.Row="4" Grid.Column="2" BackgroundColor="#f5f5f5" VerticalOptions="Fill" HorizontalOptions="Fill"/>
+
+        <Label Text="Phone" HeightRequest ="40" Grid.Row="5" Font="Bold,Medium" TextColor="Black" Grid.Column="1" WidthRequest="100" VerticalOptions="Center" HorizontalOptions="StartAndExpand"/>
+        <Entry  Grid.Row="5" Grid.Column="2" BackgroundColor="#f5f5f5"  VerticalOptions="Fill" HorizontalOptions="Fill"/>
+
+        <Button x:Name="btnRegister" Text="Register" Grid.Row="7" Grid.Column="0" Clicked="RegisterClicked" Grid.ColumnSpan="4" BackgroundColor="#f9790e" TextColor="Black" VerticalOptions="Fill" HorizontalOptions="Fill" />
+
+      </Grid>
+    </ScrollView>
+  </ContentPage.Content>
+</ContentPage>

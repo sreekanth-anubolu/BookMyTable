@@ -1,0 +1,32 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+					   xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+					   x:Class="BookMyTable.Pages.ChooseRegistrationType" BackgroundImage="table3.jpg">
+	<ContentPage.Padding>
+    <OnPlatform x:TypeArguments="Thickness"
+            iOS="0, 20, 0, 0"
+            Android="0, 0, 0, 0"
+            WinPhone="0, 0, 0, 0" />
+  </ContentPage.Padding>
+
+  <ContentPage.Content>
+    <Grid Padding="5" HorizontalOptions="Center" VerticalOptions="Center">
+      <Grid.RowDefinitions>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="20"/>
+        <RowDefinition Height="Auto"/>
+        <RowDefinition Height="Auto"/>
+      </Grid.RowDefinitions>
+
+      <Image Source="booktable.png" Grid.Row="0" VerticalOptions="Start" HorizontalOptions="Center"/>
+      <Button x:Name="btnSearch" WidthRequest="220" Text="Search Restaurant" Grid.Row="2" 
+              Clicked="SearchRestaurantClicked"  BackgroundColor="#f9790e" 
+              TextColor="Black" VerticalOptions="Fill" HorizontalOptions="Fill" />
+
+      <Button x:Name="btnRegister" WidthRequest="220" Text="Register Restaurant" Grid.Row="3"
+              Clicked="RegisterReasturantClicked"  BackgroundColor="#f9790e"
+              TextColor="Black" VerticalOptions="Fill" HorizontalOptions="Fill" />
+
+    </Grid>
+  </ContentPage.Content>
+</ContentPage>
